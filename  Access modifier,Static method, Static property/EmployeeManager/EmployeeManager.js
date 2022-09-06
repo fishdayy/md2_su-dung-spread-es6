@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Employee_1 = require("./Employee");
 var EmployeeManager = /** @class */ (function () {
     function EmployeeManager() {
@@ -9,6 +9,18 @@ var EmployeeManager = /** @class */ (function () {
     };
     EmployeeManager.prototype.showEmployee = function () {
         return EmployeeManager.ListEmployee;
+    };
+    EmployeeManager.prototype.removeEmployee = function (list) {
+        EmployeeManager.ListEmployee.splice(list - 1, 1);
+    };
+    EmployeeManager.prototype.editEmployee = function (list, newFirstName, newLastName, newBirthday, newAddress, newJobPosition) {
+        var newEmployee = EmployeeManager.ListEmployee[list - 1];
+        EmployeeManager.ListEmployee[list - 1].firstName = newFirstName;
+        EmployeeManager.ListEmployee[list - 1].lastName = newLastName;
+        EmployeeManager.ListEmployee[list - 1].birthday = newBirthday;
+        EmployeeManager.ListEmployee[list - 1].address = newAddress;
+        EmployeeManager.ListEmployee[list - 1].jobPosition = newJobPosition;
+        return newEmployee;
     };
     EmployeeManager.ListEmployee = [];
     return EmployeeManager;
@@ -20,4 +32,6 @@ var manager1 = new EmployeeManager();
 manager1.addEmployee(employee1);
 manager1.addEmployee(employee2);
 manager1.addEmployee(employee3);
+manager1.removeEmployee(1);
+manager1.editEmployee(1, 'Dinh', 'Tuan Anh');
 console.log(manager1.showEmployee());

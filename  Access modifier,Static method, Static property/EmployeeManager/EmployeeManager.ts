@@ -18,11 +18,19 @@ class EmployeeManager{
         EmployeeManager.ListEmployee.splice(list -1,1)
     }
 
-
-
-    editEmployee(list: number){
-        let newEmployee =
-        EmployeeManager.ListEmployee[list - 1] =
+    editEmployee(list: number,
+                 newFirstName?: string,
+                 newLastName?: string,
+                 newBirthday?:string,
+                 newAddress?:string,
+                 newJobPosition?:string){
+        let newEmployee = EmployeeManager.ListEmployee[list -1];
+        EmployeeManager.ListEmployee[list - 1].firstName = newFirstName;
+        EmployeeManager.ListEmployee[list - 1].lastName = newLastName;
+        EmployeeManager.ListEmployee[list - 1].birthday = newBirthday;
+        EmployeeManager.ListEmployee[list - 1].address = newAddress;
+        EmployeeManager.ListEmployee[list - 1].jobPosition = newJobPosition;
+        return newEmployee
     }
 }
 
@@ -35,5 +43,7 @@ let manager1 = new EmployeeManager()
 manager1.addEmployee(employee1)
 manager1.addEmployee(employee2)
 manager1.addEmployee(employee3)
+manager1.removeEmployee(1)
+manager1.editEmployee(1,'Dinh','Tuan Anh')
 console.log(manager1.showEmployee())
 
