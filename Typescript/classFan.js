@@ -1,14 +1,11 @@
-var Fan = /** @class */ (function () {
-    function Fan(speed, status, radius, color) {
-        if (status === void 0) { status = false; }
-        if (radius === void 0) { radius = 5; }
-        if (color === void 0) { color = 'blue'; }
+class Fan {
+    constructor(speed, status = false, radius = 5, color = 'blue') {
         this.speed = speed;
         this.status = status;
         this.radius = radius;
         this.color = color;
     }
-    Fan.prototype.speedFan = function () {
+    speedFan() {
         if (this.speed == 2) {
             return "MEDIUM";
         }
@@ -18,16 +15,16 @@ var Fan = /** @class */ (function () {
         else {
             return "SLOW";
         }
-    };
-    Fan.prototype.toString = function () {
+    }
+    toString() {
         if (this.status == true) {
-            return this.speedFan() + ',' + this.color + "," + this.radius + "fan is on";
+            return this.speedFan() + ',' + this.color + "," + this.radius + "," + "fan is on";
         }
         else {
             return "fan is off";
         }
-    };
-    return Fan;
-}());
-var fan = new Fan(2, true, 8, 'black');
+    }
+}
+let fan = new Fan(2, true, 8, 'black');
 console.log(fan.toString());
+//# sourceMappingURL=classFan.js.map

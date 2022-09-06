@@ -1,9 +1,9 @@
 "use strict";
-exports.__esModule = true;
-var Circle = /** @class */ (function () {
-    function Circle(radius) {
+Object.defineProperty(exports, "__esModule", { value: true });
+class Circle {
+    constructor(radius) {
         this.radius = radius;
     }
-    return Circle;
-}());
-exports["default"] = Circle;
+}
+exports.default = Circle;
+//# sourceMappingURL=Circle.js.map

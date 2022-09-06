@@ -1,32 +1,32 @@
-var Staff = /** @class */ (function () {
-    function Staff(name, email, age) {
+class Staff {
+    constructor(name, email, age) {
         this.name = name;
         this.email = email;
         this.age = age;
     }
-    Staff.prototype.getName = function () {
+    getName() {
         return this.name;
-    };
-    Staff.prototype.setName = function (name) {
+    }
+    setName(name) {
         this.name = name;
-    };
-    Staff.prototype.getEmail = function () {
+    }
+    getEmail() {
         return this.email;
-    };
-    Staff.prototype.setEmail = function (email) {
+    }
+    setEmail(email) {
         this.name = email;
-    };
-    Staff.prototype.getAge = function () {
+    }
+    getAge() {
         return this.age;
-    };
-    Staff.prototype.setAge = function (age) {
+    }
+    setAge(age) {
         this.age = age;
-    };
-    return Staff;
-}());
-var staff = new Staff('Staff 1', 'staff@gmail.com', 20);
-var nameStaff = staff.getName();
+    }
+}
+let staff = new Staff('Staff 1', 'staff@gmail.com', 20);
+let nameStaff = staff.getName();
 console.log(nameStaff);
 staff.setName('Staff 2');
-var currenNameStaff = staff.getName();
+let currenNameStaff = staff.getName();
 console.log(currenNameStaff);
+//# sourceMappingURL=classStaff.js.map
