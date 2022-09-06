@@ -1,12 +1,12 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Book = void 0;
-var Book = /** @class */ (function () {
-    function Book(title, author, alreadyRead) {
+class Book {
+    constructor(title, author, alreadyRead) {
         this.title = title;
         this.author = author;
         this.alreadyRead = alreadyRead;
     }
-    return Book;
-}());
+}
 exports.Book = Book;
+//# sourceMappingURL=bookList.js.map
