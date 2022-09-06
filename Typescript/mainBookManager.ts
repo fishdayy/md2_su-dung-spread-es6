@@ -1,5 +1,5 @@
 import {Book} from "./qlBook";
-import {BookManager} from "./BookManager";
+import {BookManager} from "./bookManager";
 
 let book1 = new Book('B001','Lập trình Java');
 let book2 = new Book('B002','Lập trình PHP');

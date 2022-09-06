@@ -1,43 +1,43 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.BookManager = void 0;
-var BookManager = /** @class */ (function () {
-    function BookManager() {
+class BookManager {
+    constructor() {
         this.books = [];
     }
-    BookManager.prototype.add = function (book) {
+    add(book) {
         this.books.push(book);
-    };
-    BookManager.prototype.getList = function () {
+    }
+    getList() {
         return this.books;
-    };
-    BookManager.prototype["delete"] = function (ID) {
-        var indexBookDelete = this.findBook(ID);
+    }
+    delete(ID) {
+        let indexBookDelete = this.findBook(ID);
         if (indexBookDelete != -1) {
             this.books.splice(indexBookDelete, 1);
         }
         else {
             throw new Error('delete error');
         }
-    };
-    BookManager.prototype.update = function (ID, name) {
-        var indexBookUpdate = this.findBook(ID);
+    }
+    update(ID, name) {
+        let indexBookUpdate = this.findBook(ID);
         if (indexBookUpdate != -1) {
             this.books[indexBookUpdate].setName(name);
         }
         else {
             throw new Error('update error');
         }
-    };
-    BookManager.prototype.findBook = function (ID) {
-        var i = -1;
-        this.books.forEach(function (book, index) {
+    }
+    findBook(ID) {
+        let i = -1;
+        this.books.forEach((book, index) => {
             if (book.ID === ID) {
                 i = index;
             }
         });
         return i;
-    };
-    return BookManager;
-}());
+    }
+}
 exports.BookManager = BookManager;
+//# sourceMappingURL=bookManager.js.map
