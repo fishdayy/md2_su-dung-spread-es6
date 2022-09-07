@@ -1,20 +1,20 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.Book = void 0;
-var Book = /** @class */ (function () {
-    function Book(ID, name) {
+class Book {
+    constructor(ID, name) {
         this.ID = ID;
         this.name = name;
     }
-    Book.prototype.getName = function () {
+    getName() {
         return this.name;
-    };
-    Book.prototype.setName = function (name) {
+    }
+    setName(name) {
         this.name = name;
-    };
-    Book.prototype.getID = function () {
+    }
+    getID() {
         return this.ID;
-    };
-    return Book;
-}());
+    }
+}
 exports.Book = Book;
+//# sourceMappingURL=qlBook.js.map

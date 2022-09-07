@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Abstract Class &amp; Interface/interface Resizeable/typescript-shape-oop" vcs="Git" />
   </component>
 </project>

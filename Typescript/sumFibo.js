@@ -1,5 +1,5 @@
-var Fibonacci = /** @class */ (function () {
-    function Fibonacci(a) {
+class Fibonacci {
+    constructor(a) {
         this.n1 = 0;
         this.n2 = 1;
         this.nextTerm = 0;
@@ -8,7 +8,7 @@ var Fibonacci = /** @class */ (function () {
         this.n1 = 0;
         this.n2 = 1;
     }
-    Fibonacci.prototype.showFibonacci = function () {
+    showFibonacci() {
         while (this.nextTerm <= this.a) {
             this.nextTerm = this.n1 + this.n2;
             this.n1 = this.n2;
@@ -17,8 +17,8 @@ var Fibonacci = /** @class */ (function () {
             this.sum += this.nextTerm;
         }
         return this.sum;
-    };
-    return Fibonacci;
-}());
-var fibonacci = new Fibonacci(5);
+    }
+}
+let fibonacci = new Fibonacci(5);
 console.log(fibonacci.showFibonacci());
+//# sourceMappingURL=sumFibo.js.map

@@ -4,8 +4,8 @@ var Gender;
     Gender[Gender["FEMALE"] = 1] = "FEMALE";
     Gender[Gender["OTHER"] = 2] = "OTHER";
 })(Gender || (Gender = {}));
-var Employees = /** @class */ (function () {
-    function Employees(name, gender, birthday, email, phone) {
+class Employees {
+    constructor(name, gender, birthday, email, phone) {
         this.name = "";
         this.gender = Gender.OTHER;
         this.email = "";
@@ -16,9 +16,8 @@ var Employees = /** @class */ (function () {
         this.email = email;
         this.phone = phone;
     }
-    return Employees;
-}());
-var employeeLists = [];
+}
+let employeeLists = [];
 employeeLists.push(new Employees("Nguyen Van A", Gender.MALE, new Date("1990-09-19"), "anguyen@gmail.com", "0123456789"));
 function showEmployees(employees) {
     console.log(employees);
@@ -29,3 +28,4 @@ function removeEmployees(number) {
 }
 removeEmployees(0);
 console.log(employeeLists);
+//# sourceMappingURL=qlttEmployee.js.map

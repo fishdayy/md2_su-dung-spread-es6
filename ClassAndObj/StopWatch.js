@@ -13,13 +13,12 @@ class StopWatch{
     }
 
     getElapsedTime(){
-        console.log(this.start(), this.stop())
+        // console.log(this.start(), this.stop())
         return (this.start() - this.stop())
     }
 }
 
 let stopWatch = new StopWatch(100000,0)
 stopWatch.start()
-
 stopWatch.stop();
 console.log(stopWatch.getElapsedTime())

@@ -4,7 +4,7 @@ enum Gender {
     OTHER
 }
 
-class Employees{
+ class Employees{
     name: string ="";
     gender: Gender = Gender.OTHER;
     birthday: Date;
