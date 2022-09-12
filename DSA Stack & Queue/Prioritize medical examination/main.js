@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var Queue_1 = require("./Queue");
+var patient = new Queue_1.PriorityPatient();
+patient.enqueue('Smith', 5);
+patient.enqueue('Jones', 4);
+patient.enqueue('Feh', 6);
+patient.enqueue('Brown', 1);
+patient.enqueue('Ingram', 1);
+patient.dequeue();
+patient.dequeue();
+patient.dequeue();
+console.log(patient);
