@@ -1,14 +1,22 @@
 export class Person {
+    private _id: number;
     private _name: string;
     private _age: number;
     private _job: string;
-    private _idCard: number;
 
-    constructor(name: string, age: number, job: string, idCard: number) {
+    constructor(id: number, name: string, age: number, job: string) {
+        this._id = id;
         this._name = name;
         this._age = age;
         this._job = job;
-        this._idCard = idCard;
+    }
+
+    get id(): number {
+        return this._id;
+    }
+
+    set id(value: number) {
+        this._id = value;
     }
 
     get name(): string {
@@ -33,13 +41,5 @@ export class Person {
 
     set job(value: string) {
         this._job = value;
-    }
-
-    get idCard(): number {
-        return this._idCard;
-    }
-
-    set idCard(value: number) {
-        this._idCard = value;
     }
 }
