@@ -1,9 +1,9 @@
-interface Manager<T> {
-    add(T): void;
+export interface Manager<T> {
+    add(T);
 
-    remove(id): void;
+    remove(id);
 
-    search(name): string;
+    search(name);
 
-    show(): void;
+    show();
 }

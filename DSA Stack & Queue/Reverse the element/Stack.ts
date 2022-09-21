@@ -33,8 +33,7 @@ export class Stack<T> implements IStack<T> {
 
     reverse(){
         let storageTerm = [];
-        let term = this.storage.length
-        for (let i = 0; i < term; i++) {
+        for (let i = 0; i < this.storage.length; i++) {
             storageTerm[i] = this.storage.pop();
         }
         this.storage = storageTerm;

@@ -52,12 +52,12 @@ var LinkedListStudent = /** @class */ (function () {
         var scoreStudent = this.head;
         var maxScore = this.readListStudent()[0].score;
         for (var i = 0; i < this.readListStudent().length; i++) {
-            if (maxScore <= this.readListStudent()[i].score) {
+            if (maxScore < this.readListStudent()[i].score) {
                 maxScore = this.readListStudent()[i].score;
             }
             scoreStudent = scoreStudent.next;
         }
-        return scoreStudent;
+        return maxScore;
     };
     return LinkedListStudent;
 }());

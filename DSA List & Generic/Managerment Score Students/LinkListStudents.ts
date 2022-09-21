@@ -59,11 +59,11 @@ export class LinkedListStudent{
         let scoreStudent = this.head;
         let maxScore = this.readListStudent()[0].score
         for (let i = 0; i < this.readListStudent().length; i++) {
-            if (maxScore <= this.readListStudent()[i].score){
+            if (maxScore < this.readListStudent()[i].score){
                 maxScore = this.readListStudent()[i].score
             }
             scoreStudent = scoreStudent.next
         }
-        return scoreStudent
+        return maxScore
     }
 }

@@ -1,6 +1,6 @@
 import {Customer} from "./customer";
 
-export interface Management {
+export interface iCustomerManagement {
     add(customer: Customer)
     remove(idCard: number)
     info(idCard: number)

@@ -3,7 +3,6 @@ import {Node} from "./Node";
 export class LinkedList<T> {
     head: Node<T> | null;
     tail: Node<T> | null;
-
     size: number;
 
     constructor() {

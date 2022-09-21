@@ -1,26 +1,50 @@
-import {Customer} from "./customer";
+import {Customer} from "../model/customer";
+import {iCustomerManagement} from "../model/iCustomerManagement";
 
-export class CustomerManagement extends Customer {
+export class CustomerManagement implements iCustomerManagement {
 
     listCustomer: Customer[] = [];
+    input = require('readline-sync');
 
-    add(customer: Customer){
+    add() {
+        let name = this.input.question("Ten: ");
+        let age = +this.input.question("Tuoi: ");
+        let idCard = +this.input.question("So CMND: ")
+        let timeToRent = +this.input.question("So ngay thue: ")
+        let room = this.input.question("Phong hang: ")
+        let customer: Customer = new Customer(name,age,idCard,timeToRent,room)
         this.listCustomer.push(customer)
     }
 
-    remove(idCard: number){
+    remove() {
+        let id = +this.input.question("nhap so CMND: ")
         this.listCustomer = this.listCustomer.filter((remove) => {
-            return remove.idCard != idCard
+            console.log(remove.idCard != id)
         })
     }
 
-    info(idCard: number){
+    info() {
+        let id = +this.input.question("nhap so CMND: ")
         this.listCustomer.filter((search) => {
-            return search.idCard = idCard
+            if (search.idCard === id) {
+                console.log(search)
+            } else {
+                console.log('not found')
+            }
         })
     }
 
-    totalRent(idCard: number){
+    show() {
+        console.log(this.listCustomer)
+    }
 
+    totalRent() {
+        let id = +this.input.question("nhap so CMND: ")
+        return this.listCustomer.forEach((item) => {
+            if (item.idCard == id) {
+                console.log(item.timeToRent * item.room)
+            }
+        })
     }
 }
+

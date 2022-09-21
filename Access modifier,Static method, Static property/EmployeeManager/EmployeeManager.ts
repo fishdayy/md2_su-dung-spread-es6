@@ -34,7 +34,7 @@ class EmployeeManager{
     }
 }
 
-
+let readlineSync = require('readline-sync');
 let employee1 = new Employee('dinh','anh','',"ads","")
 let employee2 = new Employee('dinhr','ansh')
 let employee3 = new Employee('dinhg','anhy')

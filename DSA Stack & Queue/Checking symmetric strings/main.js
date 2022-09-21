@@ -9,9 +9,6 @@ function checkSymmetricStrings(s) {
         stack.push(s[i]);
         queue.enqueue(s[i]);
     }
-    console.log(s.length);
-    //  console.log(stack.pop());
-    //  console.log(queue.dequeue());
     if (stack.pop() == queue.dequeue()) {
         return 'symmetric';
     }

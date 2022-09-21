@@ -1,36 +1,37 @@
 export class Document {
-    private _id: number;
-    private _imprint: string;
-    private _releaseNumber: number;
+    private _id:number;
+    private _producer: string;
+    private _quantity: number;
+    static temp = 0;
 
-
-    constructor(id: number, imprint: string, releaseNumber: number) {
-        this._id = id;
-        this._imprint = imprint;
-        this._releaseNumber = releaseNumber;
+    constructor(producer: string, quantity: number) {
+        Document.temp++;
+        this._id = Document.temp;
+        this._producer = producer;
+        this._quantity = quantity;
     }
 
     get id(): number {
         return this._id;
     }
 
-    set id(id: number) {
-        this._id = id;
+    set id(value: number) {
+        this._id = value;
     }
 
-    get imprint(): string {
-        return this._imprint;
+    get producer(): string {
+        return this._producer;
     }
 
-    set imprint(imprint: string) {
-        this._imprint = imprint;
+    set producer(value: string) {
+        this._producer = value;
     }
 
-    get releaseNumber(): number {
-        return this._releaseNumber;
+    get quantity(): number {
+        return this._quantity;
     }
 
-    set releaseNumber(releaseNumber: number) {
-        this._releaseNumber = releaseNumber;
+    set quantity(value: number) {
+        this._quantity = value;
     }
 }

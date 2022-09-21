@@ -1,18 +1,18 @@
 import {Document} from "./Document";
 
 export class Newspaper extends Document {
-    private _releaseMonth: number;
+    private _releaseDay: number;
 
-    constructor(id: number, imprint: string, releaseNumber: number, releaseMonth: number) {
+    constructor(id: number, imprint: string, releaseNumber: number, releaseDay: number) {
         super(id, imprint, releaseNumber);
-        this._releaseMonth = releaseMonth;
+        this._releaseDay = releaseDay;
     }
 
-    get releaseMonth(): number {
-        return this._releaseMonth;
+    get releaseDay(): number {
+        return this._releaseDay;
     }
 
-    set releaseMonth(value: number) {
-        this._releaseMonth = value;
+    set releaseDay(releaseDay: number) {
+        this._releaseDay = releaseDay;
     }
 }
